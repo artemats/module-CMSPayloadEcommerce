@@ -1,3 +1,29 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "func-style": [
+      "error",
+      "expression"
+    ],
+    "react/display-name": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "tabWidth": 2,
+        "semi": false,
+        "singleQuote": true
+      }
+    ]
+  }
 }
