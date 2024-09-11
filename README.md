@@ -13,7 +13,16 @@
 
 <h2 id="introduction">Introduction</h2>
 
-This is a gulp packager with Tailwind for front-end dewelopers.
+A project that includes several basic modules:
+- Ecommerce
+  - Cart
+  - Ordering
+  - Checkout (Stripe)
+- Authentication
+  - Sign in
+  - Sign up
+- CMS
+  - Payload
 
 <h2 id="requirements">Requirements</h2>
 
