@@ -3,9 +3,11 @@ import { getServerSideUser } from '@/lib/payload-utils'
 import { cookies } from 'next/headers'
 import { getPayloadClient } from '@/get-payload'
 import { notFound, redirect } from 'next/navigation'
-import { Order, Product, ProductFile } from '@/payload-types'
+import { Order, Product, ProductFile, User } from '@/payload-types'
 import { PRODUCT_CATEGORIES } from '@/config'
 import { formatPrice } from '@/lib/utils'
+import Link from 'next/link'
+import PaymentStatus from '@/components/PaymentStatus'
 
 interface IThankYouPage {
   searchParams: {
@@ -147,6 +149,26 @@ const ThankYouPage = async ({ searchParams }: IThankYouPage) => {
                   <p>Transaction Fee</p>
                   <p className="text-gray-900">{formatPrice(1)}</p>
                 </div>
+
+                <div className="flex items-center justify-between border-t border-gray-200 pt-6 text-gray-900">
+                  <p className="text-base">Total</p>
+                  <p className="text-base">{formatPrice(orderTotal + 1)}</p>
+                </div>
+              </div>
+
+              <PaymentStatus
+                isPaid={order._isPaid}
+                orderEmail={(order.user as User).email}
+                orderId={order.id}
+              />
+
+              <div className="mt-16 border-t border-gray-200 py-6 text-right">
+                <Link
+                  href="/products"
+                  className="text-sm font-medium text-blue-600 hover:text-blue-500"
+                >
+                  Continue shopping &rarr;
+                </Link>
               </div>
             </div>
           </div>
