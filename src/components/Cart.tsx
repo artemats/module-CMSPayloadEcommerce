@@ -95,7 +95,12 @@ const Cart = () => {
               className="relative mb-4 h-60 w-60 text-muted-foreground"
               aria-hidden="true"
             >
-              <Image src="/empty-cart.jpg" alt="Empty cart" fill />
+              <Image
+                src="/empty-cart.jpg"
+                alt="Empty cart"
+                fill
+                sizes="width:100%"
+              />
             </div>
             <div className="text-xl font-semibold">Your cart is empty</div>
             <SheetTrigger asChild>

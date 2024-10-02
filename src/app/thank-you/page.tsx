@@ -126,7 +126,7 @@ const ThankYouPage = async ({ searchParams }: IThankYouPage) => {
                             download={product.name}
                             className="text-blue-600 hover:underline underline-offset-2"
                           >
-                            Download sset
+                            Download asset
                           </a>
                         ) : null}
                       </div>

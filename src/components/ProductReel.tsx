@@ -27,8 +27,10 @@ const ProductReel = (props: IProductReel) => {
       { getNextPageParam: (lastPage) => lastPage.nextPage },
     )
 
-  const products = queryResults?.pages.flatMap((page) => page.items)
-
+  const products = queryResults?.pages.flatMap(
+    (page) => page.items,
+  ) as unknown as Product[]
+  console.log('ProductReel, products ', products)
   let map: (Product | null)[] = []
 
   if (products && products.length) {

@@ -4,7 +4,7 @@ type Event = MouseEvent | TouchEvent
 
 export const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
   ref: RefObject<T>,
-  handler: (event: Event) => void,
+  handler: (event: Event) => void, // eslint-disable-line no-unused-vars
 ) => {
   useEffect(() => {
     const listener = (event: Event) => {
