@@ -36,6 +36,7 @@
     "body-parser": "^1.20.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "copyfiles": "^2.4.1",
     "date-fns": "^2.30.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",

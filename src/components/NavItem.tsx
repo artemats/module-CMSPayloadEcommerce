@@ -59,6 +59,7 @@ const NavItem = ({ isAnyOpen, category, handleOpen, isOpen }: INavItem) => {
                           src={item.imageSrc}
                           alt={item.name}
                           fill
+                          sizes="100%"
                           className="object-cover object-center"
                         />
                       </div>

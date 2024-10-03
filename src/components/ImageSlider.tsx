@@ -98,6 +98,7 @@ const ImageSlider = ({ urls }: IImageSlider) => {
               className="-z-10 h-full w-full object-contain object-center"
               src={url}
               alt={`Product image ${url}`}
+              sizes="100%"
             />
           </SwiperSlide>
         ))}

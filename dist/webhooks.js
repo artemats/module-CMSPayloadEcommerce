@@ -64,7 +64,9 @@ var stripeWebhookHandler = function (req, res) { return __awaiter(void 0, void 0
                 if (!((_d = session === null || session === void 0 ? void 0 : session.metadata) === null || _d === void 0 ? void 0 : _d.userId) || !session.metadata.orderId) {
                     return [2 /*return*/, res.status(400).send('Webhook Error: No user present in metadata')];
                 }
+                console.log('stripeWebhookHandler, event ', event);
                 if (!(event.type === 'checkout.session.completed')) return [3 /*break*/, 9];
+                console.log('stripeWebhookHandler, checkout.session.completed');
                 return [4 /*yield*/, (0, get_payload_1.getPayloadClient)()];
             case 1:
                 payload = _e.sent();
@@ -105,11 +107,10 @@ var stripeWebhookHandler = function (req, res) { return __awaiter(void 0, void 0
                                 equals: session.metadata.orderId,
                             },
                         },
-                    })
-                    // send receipt
-                ];
+                    })];
             case 4:
                 _e.sent();
+                console.log('stripeWebhookHandler, update _isPaid status to true');
                 _e.label = 5;
             case 5:
                 _e.trys.push([5, 8, , 9]);
