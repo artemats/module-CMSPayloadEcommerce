@@ -30,7 +30,7 @@ const ProductReel = (props: IProductReel) => {
   const products = queryResults?.pages.flatMap(
     (page) => page.items,
   ) as unknown as Product[]
-  console.log('ProductReel, products ', products)
+
   let map: (Product | null)[] = []
 
   if (products && products.length) {

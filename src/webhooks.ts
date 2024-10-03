@@ -37,8 +37,9 @@ export const stripeWebhookHandler = async (
   if (!session?.metadata?.userId || !session.metadata.orderId) {
     return res.status(400).send('Webhook Error: No user present in metadata')
   }
-
+  console.log('stripeWebhookHandler, event ', event)
   if (event.type === 'checkout.session.completed') {
+    console.log('stripeWebhookHandler, checkout.session.completed')
     const payload = await getPayloadClient()
 
     const { docs: users } = await payload.find({
@@ -79,7 +80,7 @@ export const stripeWebhookHandler = async (
         },
       },
     })
-
+    console.log('stripeWebhookHandler, update _isPaid status to true')
     // send receipt
     try {
       const data = await resend.emails.send({
