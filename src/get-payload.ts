@@ -8,7 +8,7 @@ dotenv.config({
   path: path.resolve(__dirname, '../.env'),
 })
 
-const transporter = nodemailer.createTransport({
+const transport = nodemailer.createTransport({
   host: 'smtp.resend.com',
   secure: true,
   port: 2465,
@@ -18,11 +18,9 @@ const transporter = nodemailer.createTransport({
   },
 })
 
-// TODO: fix moment with any
 let cached = (global as any).payload
 
 if (!cached) {
-  // TODO: fix moment with any
   cached = (global as any).payload = {
     client: null,
     promise: null,
@@ -47,9 +45,9 @@ export const getPayloadClient = async ({
   if (!cached.promise) {
     cached.promise = payload.init({
       email: {
-        transport: transporter,
-        fromAddress: 'onboarding@resend.dev',
         fromName: 'MVP Payload Store',
+        fromAddress: 'hello@payloadcmsecommerce.com',
+        transport,
       },
       secret: process.env.PAYLOAD_SECRET!,
       local: !initOptions?.express,

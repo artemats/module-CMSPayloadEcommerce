@@ -5,17 +5,17 @@ export const PRODUCT_CATEGORIES = [
     featured: [
       {
         name: 'Flat Icons',
-        href: '',
+        href: '/products?category=icons',
         imageSrc: '/nav/icons/flat-icons.jpg',
       },
       {
         name: '3D Icons',
-        href: '',
+        href: '/products?category=icons',
         imageSrc: '/nav/icons/3d-icons.jpg',
       },
       {
         name: 'Vector Icons',
-        href: '',
+        href: '/products?category=icons',
         imageSrc: '/nav/icons/vector-icons.jpg',
       },
     ],
@@ -26,17 +26,17 @@ export const PRODUCT_CATEGORIES = [
     featured: [
       {
         name: 'Website Templates',
-        href: '',
+        href: '/products?category=design_templates',
         imageSrc: '/nav/design_templates/website-templates.avif',
       },
       {
         name: 'Presentation Templates',
-        href: '',
+        href: '/products?category=design_templates',
         imageSrc: '/nav/design_templates/presentation-templates.avif',
       },
       {
         name: 'Social Media Templates',
-        href: '',
+        href: '/products?category=design_templates',
         imageSrc: '/nav/design_templates/social-media-templates.avif',
       },
     ],
@@ -47,17 +47,17 @@ export const PRODUCT_CATEGORIES = [
     featured: [
       {
         name: 'Hand-drawn Illustrations',
-        href: '',
+        href: '/products?category=illustrations',
         imageSrc: '/nav/illustrations/hand-dawn-illustrations.avif',
       },
       {
         name: 'Vector Illustrations',
-        href: '',
+        href: '/products?category=illustrations',
         imageSrc: '/nav/illustrations/vector-illustrations.avif',
       },
       {
         name: 'Character Illustrations',
-        href: '',
+        href: '/products?category=illustrations',
         imageSrc: '/nav/illustrations/character-illustrations.avif',
       },
     ],
@@ -68,17 +68,17 @@ export const PRODUCT_CATEGORIES = [
     featured: [
       {
         name: 'Web UI Kits',
-        href: '',
+        href: '/products?category=ui_kits',
         imageSrc: '/nav/ui_kits/web.webp',
       },
       {
         name: 'Mobile UI Kits',
-        href: '',
+        href: '/products?category=ui_kits',
         imageSrc: '/nav/ui_kits/mobile.webp',
       },
       {
         name: 'Dashboard UI Kits',
-        href: '',
+        href: '/products?category=ui_kits',
         imageSrc: '/nav/ui_kits/dashboard.webp',
       },
     ],
